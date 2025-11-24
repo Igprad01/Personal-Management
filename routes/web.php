@@ -3,10 +3,10 @@
 use Illuminate\Support\Facades\Route;
 use Laravel\Fortify\Features;
 use Livewire\Volt\Volt;
+use App\Livewire\Portofolio\index;
 
-Route::get('/', function () {
-    return view('welcome');
-})->name('home');
+Route::get('/', index::class)->name('portofolio.index');
+
 
 Route::view('dashboard', 'dashboard')
     ->middleware(['auth', 'verified'])
